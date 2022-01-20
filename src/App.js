@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,7 +13,7 @@ function App() {
     }, []);
 
     const raidItems = raidChoices.map((raid) =>
-        <li>{raid}</li>
+        <Link to={`/fights/${raid.id}`}>{raid.name}</Link>
     );
 
   return (
